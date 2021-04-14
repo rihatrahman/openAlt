@@ -33,9 +33,11 @@ This document details how to get set-up if you would like to clone the repositor
 ## 2. Setting up the Databases 📊
 The Event data will be ingested into a MySQL database titled `crossRefEventDataMain`. The script to create it can be found [here](https://github.com/tdbowman-CompSci-F2020/openAlt/blob/master/SQL/CrossrefeventdataWithMain/crossrefeventdataWithMain.sql).  
   
-The journal, publisher, author, title, and date information is stored in a seperate MySQL database titled `dr_bowman_doi_data_tables`. The script to create it can be found [here](https://github.com/tdbowman-CompSci-F2020/openAlt/blob/master/SQL/DOI_Author_Database/dr_bowman_doi_data_tables.sql).
+The journal, publisher, author, title, and date information is stored in a seperate MySQL database titled `dr_bowman_doi_data_tables`. The script to create it can be found [here](https://github.com/tdbowman-CompSci-F2020/openAlt/blob/master/SQL/DOI_Author_Database/doidata.sql).
 
-Anyone can use our scripts and database schemas to create and fill in `crossRefEventDataMain`, but you will need to use other methods to fill in the needed fields for `dr_bowman_doi_data_tables`. This [GitHub repository](https://github.com/fabiobatalha/crossrefapi) is a good place to start.
+Anyone can use our scripts and database schemas to create and fill in `crossRefEventDataMain`, but you will need to use other methods to fill in the needed fields for `doidata`. This [GitHub repository](https://github.com/fabiobatalha/crossrefapi) is a good place to start.
+
+
 
 ## 3. Collecting and Organizing the Events 🏷️
 Before we can run the web server, we need to collect the data from the Crossref API. This will take some time, as there are millions of events to collect. We highly recommend reading Crossref's [guide](https://www.eventdata.crossref.org/guide/) before continuing.  
